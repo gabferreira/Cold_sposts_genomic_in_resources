@@ -4,7 +4,7 @@
 
 <p align="justify">
 
-Scripts used to build figures presented in the manuscript: Toward a global science of conservation genomics: coldspots in genomic resources highlight a need for equitable collaborations and capacity building.
+Scripts used to build figures presented in the manuscript: Toward a global science of conservation genomics: coldspots in genomic resources highlight a need for equitable collaborations and capacity building. Scripts was constructed by multiple coauthors of the manuscript.
 
 </p>
 
