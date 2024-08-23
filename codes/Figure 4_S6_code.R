@@ -6,8 +6,10 @@ library(svglite)
 library(ggplot2)
 
 #read in data
-IUCN_data<-read.csv("Phase 2 Filtering - Phase 2 Filtering (4).csv", header=T, sep= ",")
-IUCN_data<-IUCN_data[IUCN_data$Passed.Filter.2=="Yes",]
+IUCN_data<-read.csv("Final_postsubmission_Phase_2_Filtering.csv", header=T, sep= ",")
+
+
+length(IUCN_data$Scope)
 
 #693 wild and captive
 length(unique(IUCN_data$Study.ID))
@@ -16,11 +18,13 @@ IUCN_data<-IUCN_data[is.na(IUCN_data$IUCN.Status)==FALSE,]
 length(unique(IUCN_data$Study.ID))
 
 #relabel Scope names
-IUCN_data$Scope<-replace(IUCN_data$Scope,IUCN_data$Scope=="just genomic data (Level 0)", "Level 1")
-IUCN_data$Scope<-replace(IUCN_data$Scope,IUCN_data$Scope=="spatial only (Level 1)", "Level 2")
-IUCN_data$Scope<-replace(IUCN_data$Scope,IUCN_data$Scope=="climate functional variation (Level 2a)", "Level 4")
-IUCN_data$Scope<-replace(IUCN_data$Scope,IUCN_data$Scope=="other global change functional variation (Level 2b)", "Level 3")
-IUCN_data$Scope<-replace(IUCN_data$Scope,IUCN_data$Scope=="adaptive potential (Level 3)", "Level 5")
+IUCN_data$Scope<-replace(IUCN_data$Scope,IUCN_data$Scope=="Level 1: General genomic resources", "Level 1")
+IUCN_data$Scope<-replace(IUCN_data$Scope,IUCN_data$Scope=="Level 2: Spatial genomic variation", "Level 2")
+IUCN_data$Scope<-replace(IUCN_data$Scope,IUCN_data$Scope=="Level 3: Functional Variation - global change", "Level 3")
+IUCN_data$Scope<-replace(IUCN_data$Scope,IUCN_data$Scope=="Level 4: Functional Variation - climate change", "Level 4")
+IUCN_data$Scope<-replace(IUCN_data$Scope,IUCN_data$Scope=="Level 5: Adaptive Potential - climate change", "Level 5")
+
+
 
 #refactor genomic data type to change order
 IUCN_data$Genomic<-factor(IUCN_data$Genomic, levels = c("RNASeq","GBS/RAD/target capture","Whole genome"))
@@ -51,19 +55,33 @@ length(deduplicate_place_noLC$Scope)
 #235 unique studies
 length(unique(deduplicate_place_noLC$Study.ID))
 
-#calculate n for each bar of the final IUCN/Scope plots
+#calculate n for each bar of the final IUCN/Scope plots and final IUCN/Genomic plots
 #LC
+#Scope
 sum(deduplicate_place$Scope=="Level 1")
 sum(deduplicate_place$Scope=="Level 2")
 sum(deduplicate_place$Scope=="Level 3")
 sum(deduplicate_place$Scope=="Level 4")
 sum(deduplicate_place$Scope=="Level 5")
+#Genomic
+sum(deduplicate_place$Genomic=="GBS/RAD/target capture")
+sum(deduplicate_place$Genomic=="RNASeq")
+sum(deduplicate_place$Genomic=="Whole genome")
+
 #no LC
+#Scope
 sum(deduplicate_place_noLC$Scope=="Level 1")
 sum(deduplicate_place_noLC$Scope=="Level 2")
 sum(deduplicate_place_noLC$Scope=="Level 3")
 sum(deduplicate_place_noLC$Scope=="Level 4")
 sum(deduplicate_place_noLC$Scope=="Level 5")
+#Genomic
+sum(deduplicate_place_noLC$Genomic=="GBS/RAD/target capture")
+sum(deduplicate_place_noLC$Genomic=="RNASeq")
+sum(deduplicate_place_noLC$Genomic=="Whole genome")
+
+
+
 
 #final plots
 #Scope
@@ -83,8 +101,8 @@ IUCN_no_LC_scope_plot<-ggplot(deduplicate_place_noLC, aes(Scope, fill = IUCN.Sta
   theme(panel.border=element_blank(),axis.line.x=element_line(size=1),panel.grid = element_blank(), legend.text = element_text(size=20),legend.title=element_text(size=20),axis.title.x = element_text(size=24, margin = margin(t=10)), axis.title.y=element_text(size=24, margin=margin(r=10)),axis.text = element_text(size=20))
 IUCN_no_LC_scope_plot
 
-ggsave("IUCN.svg", plot=IUCN_scope_plot, width=9, height=9,dpi=200)
-ggsave("IUCN_noLC.svg", plot=IUCN_no_LC_scope_plot, width=9, height=9,dpi=200)
+ggsave("IUCN_v2.svg", plot=IUCN_scope_plot, width=9, height=9,dpi=200)
+ggsave("IUCN_noLC_v2.svg", plot=IUCN_no_LC_scope_plot, width=9, height=9,dpi=200)
 
 #Genomic Data
 IUCN_genomic<-ggplot(deduplicate_place, aes(Genomic, fill = IUCN.Status)) +
@@ -106,5 +124,5 @@ IUCN_noLC_genomic<-ggplot(deduplicate_place_noLC, aes(Genomic, fill = IUCN.Statu
   theme(panel.border=element_blank(),axis.line.x=element_line(size=1),panel.grid = element_blank(), legend.text = element_text(size=20),legend.title=element_text(size=20),axis.title.x = element_text(size=24, margin = margin(t=10)), axis.title.y=element_text(size=24, margin=margin(r=10)),axis.text = element_text(size=14.5))
 IUCN_noLC_genomic
 
-ggsave("IUCN_genomic.svg", plot=IUCN_genomic, width=9, height=9,dpi=300)
-ggsave("IUCN_noLC_genomic.svg", plot=IUCN_noLC_genomic, width=9, height=9,dpi=300)
+ggsave("Figure 4.svg", plot=IUCN_genomic, width=9, height=9,dpi=300)
+ggsave("Figure S6.svg", plot=IUCN_noLC_genomic, width=9, height=9,dpi=300)

@@ -13,8 +13,9 @@ library(dplyr)
 setwd("E:/Manuscritos_em_producao/Manuscrito_Kelly_Zamudio_Cold_spots/data")
 
 # load data
-data <- read.csv("Phase_2_Filtering_updated.csv", sep = ",", fileEncoding = "latin1")
+data <- read.csv("Final_postsubmission_Phase_2_Filtering.csv", sep = ",", fileEncoding = "latin1")
 data <- subset(data, Passed.Filter.2 == "Yes" & Wild.or.Captive == "Wild")
+names(data)[1] <- "Study.ID"
 
 # remove duplicates
 data <- data %>%
@@ -37,8 +38,8 @@ missing_countries <- setdiff(all_countries, nodes$Country)
 nodes <- nodes %>%
   bind_rows(data.frame(Country = missing_countries, count = 0, global_north_south = NA))
 
-nodes[142, 3] <- "Global South"
-nodes[143, 3] <- "Global North"
+# nodes[142, 3] <- "Global South"
+# nodes[143, 3] <- "Global North"
 
 # remove duplicates on edges
 edges <- distinct(edges)
@@ -78,5 +79,5 @@ x11()
 print(g)
 
 # saving
-setwd("E:/Manuscritos_em_producao/Manuscrito_Kelly_Zamudio_Cold_spots/resu/final")
+setwd("E:/Manuscritos_em_producao/Manuscrito_Kelly_Zamudio_Cold_spots/resu/final/final_V2")
 ggsave("graph_conections_global_south_north2.png", plot = g, width = 18, height = 10, dpi = 300, bg = "white")

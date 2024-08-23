@@ -10,7 +10,7 @@ library(dplyr)
 setwd("E:/Manuscritos_em_producao/Manuscrito_Kelly_Zamudio_Cold_spots/data")
 
 # load data
-data_raw <- read.csv("Phase_2_Filtering_updated.csv", 
+data_raw <- read.csv("Final_postsubmission_Phase_2_Filtering.csv", 
                  head=T, sep= ",")
 head(data_raw)
 

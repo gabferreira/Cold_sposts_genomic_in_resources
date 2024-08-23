@@ -13,13 +13,14 @@ library(ggforce)
 setwd("E:/Manuscritos_em_producao/Manuscrito_Kelly_Zamudio_Cold_spots/data")
 
 # load data
-data <- read.csv("Phase_2_Filtering_updated.csv", sep = ",", fileEncoding="latin1")
+data <- read.csv("Final_postsubmission_Phase_2_Filtering.csv", sep = ",", fileEncoding="latin1")
 head(data)
 
 # subset yes only data
 data <- subset(data, Passed.Filter.2 == "Yes")
 data <- subset(data, Wild.or.Captive == "Wild")
-length(unique(data$Study.ID))
+length(unique(data$ï..Study.ID))
+names(data)[1] <- "Study.ID"
 
 # remove duplicates
 data <- data %>%
@@ -78,5 +79,5 @@ redes <- ggplot(data = world) +
 print(redes)
 
 # save the figure
-setwd("E:/Manuscritos_em_producao/Manuscrito_Kelly_Zamudio_Cold_spots/resu/final")
-ggsave("conections_countries_new.png", plot = redes, width = 10, height = 5, dpi = 300, bg = "white")
+setwd("E:/Manuscritos_em_producao/Manuscrito_Kelly_Zamudio_Cold_spots/resu/final/final_V2")
+ggsave("conections_countries_new.pdf", plot = redes, width = 10, height = 5, dpi = 300, bg = "white")

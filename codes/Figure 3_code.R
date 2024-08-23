@@ -14,30 +14,30 @@ library(hrbrthemes)
 library(plotly)
 
 #read in data
-global_change_data<-read.csv("Phase 2 Filtering - Phase 2 Filtering (4).csv", header=T, sep= ",")
-#filter by passed filter 2
-global_change_data<-global_change_data[global_change_data$Passed.Filter.2=="Yes",]
+global_change_data<-read.csv("Final_postsubmission_Phase_2_Filtering.csv", header=T, sep= ",")
 
 #rename scopes
-global_change_data$Scope<-replace(global_change_data$Scope,global_change_data$Scope=="just genomic data (Level 0)", "Level 1")
-global_change_data$Scope<-replace(global_change_data$Scope,global_change_data$Scope=="spatial only (Level 1)", "Level 2")
-global_change_data$Scope<-replace(global_change_data$Scope,global_change_data$Scope=="climate functional variation (Level 2a)", "Level 4")
-global_change_data$Scope<-replace(global_change_data$Scope,global_change_data$Scope=="other global change functional variation (Level 2b)", "Level 3")
-global_change_data$Scope<-replace(global_change_data$Scope,global_change_data$Scope=="adaptive potential (Level 3)", "Level 5")
+global_change_data$Scope<-replace(global_change_data$Scope,global_change_data$Scope=="Level 1: General genomic resources", "Level 1")
+global_change_data$Scope<-replace(global_change_data$Scope,global_change_data$Scope=="Level 2: Spatial genomic variation", "Level 2")
+global_change_data$Scope<-replace(global_change_data$Scope,global_change_data$Scope=="Level 3: Functional Variation - global change", "Level 3")
+global_change_data$Scope<-replace(global_change_data$Scope,global_change_data$Scope=="Level 4: Functional Variation - climate change", "Level 4")
+global_change_data$Scope<-replace(global_change_data$Scope,global_change_data$Scope=="Level 5: Adaptive Potential - climate change", "Level 5")
 
 #deduplicate by Study, Scope
 global_change_data_dedup <- distinct(global_change_data, Study.ID, Scope, .keep_all = TRUE)
 
+
 #703 unique Study, Scope combos ( a few studies double counted bc they had multiple scopes)
 length(global_change_data_dedup$Study.ID)
 #693 unique studies
-length(unique(global_change_data_dedup$Study.ID))
+unique(global_change_data_dedup$Study.ID)
 
 
 #make a table with counts by Scope and Year
 global_change_data_dedup_count <- global_change_data_dedup %>% 
   group_by(Year, Scope) %>% 
   count(nrow(`Scope`))
+global_change_data_dedup_count
 
 #make the plot!
 num_study_by_year_scope<-ggplot(global_change_data_dedup_count, aes(x=Year, y= n, fill=Scope)) + 
@@ -52,6 +52,6 @@ num_study_by_year_scope<-ggplot(global_change_data_dedup_count, aes(x=Year, y= n
 num_study_by_year_scope
 
 #save the plot
-ggsave("num_study_by_year_scope.svg", plot=num_study_by_year_scope, width=9, height=7,dpi=300)
+ggsave("Figure 3_v2.svg", plot=num_study_by_year_scope, width=9, height=7,dpi=300)
 
 

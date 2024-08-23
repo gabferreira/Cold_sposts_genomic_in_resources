@@ -11,7 +11,7 @@ library(ggpubr)
 library(svglite)
 
 #read in data
-data<- read.csv("~/Downloads/Copy2 of Phase 2 Filtering - Phase 2 Filtering corrected No GN 7.22.24.csv", header=TRUE)
+data<- read.csv("Final_postsubmission_Phase_2_Filtering.csv", header=TRUE)
 
 
 names(data)[names(data) == "X1st.Author.Origin.Country"] <- "First.Author.Origin.Country"
@@ -48,6 +48,8 @@ data.filtered.no.GNandGS.studies <- anti_join(data.filtered, unique_study_ids_df
 deduplicated_data <- data.filtered.no.GNandGS.studies %>%
   distinct(Study.ID, .keep_all = TRUE)
 
+deduplicated_data$
+
 #calculate prop local authors
 deduplicated_data$Prop.Local.Authors <- deduplicated_data$Number.of.Local.Authors / deduplicated_data$Total.Number.of.Authors
 
@@ -59,19 +61,19 @@ deduplicated_data$Number.of.collabs.from.Global.South<-deduplicated_data$Number.
 
 #remove single author studies
 deduplicated_data_no_single_author<-subset(deduplicated_data, deduplicated_data$Total.Number.of.Authors.no.first.author>0)
-nrow(deduplicated_data) #555
-nrow(deduplicated_data_no_single_author) #551
+nrow(deduplicated_data) #543
+nrow(deduplicated_data_no_single_author) #540
 
 #sanity check: make sure this worked, and establish baseline #s
-sum(deduplicated_data_no_single_author$Number.of.authors.from.Global.North) #2890
-sum(deduplicated_data_no_single_author$Number.of.collabs.from.Global.North) #2890
-sum(deduplicated_data_no_single_author$Number.of.authors.from.Global.South) #890
-sum(deduplicated_data_no_single_author$Number.of.collabs.from.Global.South) #890
+sum(deduplicated_data_no_single_author$Number.of.authors.from.Global.North) #2775
+sum(deduplicated_data_no_single_author$Number.of.collabs.from.Global.North) #2775
+sum(deduplicated_data_no_single_author$Number.of.authors.from.Global.South) #936
+sum(deduplicated_data_no_single_author$Number.of.collabs.from.Global.South) #936
 
 #calculate % local collabs (not including 1st author) from GN vs GS
 deduplicated_data_no_single_author$Number.of.Local.Authors.No.First.Author<-deduplicated_data_no_single_author$Number.of.Local.Authors
-sum(deduplicated_data_no_single_author$Number.of.Local.Authors.No.First.Author) #2687
-sum(deduplicated_data_no_single_author$Number.of.Local.Authors) #2687
+sum(deduplicated_data_no_single_author$Number.of.Local.Authors.No.First.Author) #2575
+sum(deduplicated_data_no_single_author$Number.of.Local.Authors) #2575
 
 
 #first, subtract first author from the appropriate column (depending on whether they're from GN or GS)
@@ -82,22 +84,22 @@ for (i in 1:nrow(deduplicated_data_no_single_author)) {
 }
 
 #sanity check: number of local authors should be slightly less now
-sum(deduplicated_data_no_single_author$Number.of.Local.Authors.No.First.Author) #2316
-sum(deduplicated_data_no_single_author$Number.of.Local.Authors) #2687
+sum(deduplicated_data_no_single_author$Number.of.Local.Authors.No.First.Author) #2361
+sum(deduplicated_data_no_single_author$Number.of.Local.Authors) #2575
 
 #now calculate Prop local collabs that doesn't include first author
 #I made a column for this that matched Prop Local Authors at first
 deduplicated_data_no_single_author$Prop.Local.Collabs<-deduplicated_data_no_single_author$Prop.Local.Authors
 
 #sanity check: values should be the same
-mean(deduplicated_data_no_single_author$Prop.Local.Authors) #0.7273406
-mean(deduplicated_data_no_single_author$Prop.Local.Collabs) #0.7273406
+mean(deduplicated_data_no_single_author$Prop.Local.Authors) #0.7126534
+mean(deduplicated_data_no_single_author$Prop.Local.Collabs) #0.7126534
 
 deduplicated_data_no_single_author$Prop.Local.Collabs<-deduplicated_data_no_single_author$Number.of.Local.Authors.No.First.Author/deduplicated_data_no_single_author$Total.Number.of.Authors
 
 #sanity check: values should now be different
-mean(deduplicated_data_no_single_author$Prop.Local.Authors) #0.7273406
-mean(deduplicated_data_no_single_author$Prop.Local.Collabs) #0.5901831
+mean(deduplicated_data_no_single_author$Prop.Local.Authors) #0.7126534
+mean(deduplicated_data_no_single_author$Prop.Local.Collabs) #0.6409292
 
 #calculate mean and SE for error bars
 
@@ -165,8 +167,8 @@ print(p1)
 print(p2)
 
 
-ggsave("Percent_Local_Coauthor_1.svg", plot=p1, width=8, height=8,dpi=300)
-ggsave("Number_Local_Coauthor_1.svg", plot=p2, width=8, height=8,dpi=300)
+ggsave("Figure 6b_v2.svg", plot=p1, width=8, height=8,dpi=300)
+ggsave("Figure 6c_v2.svg", plot=p2, width=8, height=8,dpi=300)
 
 
 
