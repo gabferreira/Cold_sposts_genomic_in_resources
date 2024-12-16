@@ -1,5 +1,5 @@
 # Toward a global science of conservation genomics: coldspots in genomic resources highlight a need for equitable collaborations and capacity building 
-# Code for Fig 5: Graph collaborations between countries
+# Code for Centrality degree
 # R version 4.3.2
 
 # packages
