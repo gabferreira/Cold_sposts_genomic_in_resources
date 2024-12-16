@@ -1,0 +1,118 @@
+Country,Studied species,Amphibia_richness_Frost_2024,relative_richness %,classes
+Thailand,1,208,0.481,0-10%
+Honduras,1,152,0.658,0-10%
+India,3,431,0.696,0-10%
+Ivory Coast,1,96,1.042,0-10%
+Guatemala,2,165,1.212,0-10%
+Indonesia,6,457,1.313,0-10%
+Venezuela,5,369,1.355,0-10%
+Colombia,12,860,1.395,0-10%
+Liberia,1,69,1.449,0-10%
+Angola,2,129,1.55,0-10%
+Zimbabwe,1,63,1.587,0-10%
+Chile,1,59,1.695,0-10%
+Democratic Republic of Congo,4,235,1.702,0-10%
+Argentina,3,174,1.724,0-10%
+Guyana,3,156,1.923,0-10%
+Myanmar,3,155,1.935,0-10%
+Uruguay,1,47,2.128,0-10%
+Canada,1,45,2.222,0-10%
+Guinea,2,90,2.222,0-10%
+South Africa,3,133,2.256,0-10%
+Mexico,11,429,2.564,0-10%
+Madagascar,11,417,2.638,0-10%
+Ecuador,19,680,2.794,0-10%
+Malaysia,8,281,2.847,0-10%
+Central African Republic,2,69,2.899,0-10%
+El Salvador,1,33,3.03,0-10%
+Trinidad and Tobago,1,33,3.03,0-10%
+Sierra Leone,2,64,3.125,0-10%
+Costa Rica,7,218,3.211,0-10%
+Papua New Guinea,14,415,3.373,0-10%
+Suriname,4,118,3.39,0-10%
+Tanzania,7,202,3.465,0-10%
+Bolivia,10,280,3.571,0-10%
+Malawi,3,83,3.614,0-10%
+Nepal,2,54,3.704,0-10%
+Nicaragua,3,77,3.896,0-10%
+Gabon,4,102,3.922,0-10%
+Equatorial Guinea,3,76,3.947,0-10%
+Botswana,2,43,4.651,0-10%
+Brazil,60,1235,4.858,0-10%
+Ghana,4,81,4.938,0-10%
+South Korea,1,20,5,0-10%
+Kenya,6,117,5.128,0-10%
+Philippines,6,109,5.505,0-10%
+French Guiana,7,127,5.512,0-10%
+Cameroon,13,223,5.83,0-10%
+Panama,14,227,6.167,0-10%
+Peru,42,677,6.204,0-10%
+Belgium,1,15,6.667,0-10%
+Mozambique,6,88,6.818,0-10%
+Nigeria,8,115,6.957,0-10%
+Republic of Kosovo,1,14,7.143,0-10%
+Taiwan,3,40,7.5,0-10%
+Latvia,1,13,7.692,0-10%
+China,55,645,8.527,0-10%
+Japan,10,109,9.174,0-10%
+Bosnia and Herzegovina,2,20,10,0-10%
+Czechia,2,19,10.526,11-20%
+Puerto Rico,2,19,10.526,11-20%
+Australia,33,253,13.043,11-20%
+Pakistan,3,23,13.043,11-20%
+Saudi Arabia,1,7,14.286,11-20%
+Slovenia,3,19,15.789,11-20%
+Denmark,2,12,16.667,11-20%
+Finland,1,6,16.667,11-20%
+Moldova,2,12,16.667,11-20%
+Hungary,3,17,17.647,11-20%
+Afghanistan,2,10,20,11-20%
+Austria,4,19,21.053,21-30%
+Sao Tome and Principe,2,9,22.222,21-30%
+Slovakia,4,18,22.222,21-30%
+Azerbaijan,3,12,25,21-30%
+Georgia,3,12,25,21-30%
+Germany,5,20,25,21-30%
+United States of America,87,338,25.74,21-30%
+Montenegro,4,15,26.667,21-30%
+Ethiopia,21,78,26.923,21-30%
+Russia,9,33,27.273,21-30%
+Serbia,6,22,27.273,21-30%
+Poland,5,18,27.778,21-30%
+Syria,2,7,28.571,21-30%
+Kazakhstan,4,13,30.769,21-30%
+Ireland,1,3,33.333,31-40%
+Romania,6,18,33.333,31-40%
+Turkmenistan,2,6,33.333,31-40%
+North Macedonia,5,14,35.714,31-40%
+Sweden,4,11,36.364,31-40%
+Turkey,13,35,37.143,31-40%
+Algeria,6,16,37.5,31-40%
+Armenia,3,8,37.5,31-40%
+Bulgaria,8,21,38.095,31-40%
+Iran,8,21,38.095,31-40%
+Seychelles,5,13,38.462,31-40%
+Iraq,2,5,40,31-40%
+United Kingdom,3,7,42.857,41-50%
+Portugal,9,20,45,41-50%
+Albania,8,16,50,41-50%
+Croatia,10,20,50,41-50%
+Jordan,3,6,50,41-50%
+Solomon Islands,10,20,50,41-50%
+Switzerland,10,20,50,41-50%
+Uzbekistan,2,4,50,41-50%
+Italy,19,37,51.351,51-60%
+France,19,35,54.286,51-60%
+Tunisia,4,7,57.143,51-60%
+Ukraine,12,21,57.143,51-60%
+Spain,22,35,62.857,61-70%
+Greece,15,21,71.429,61-70%
+Israel,6,8,75,61-70%
+Kyrgyzstan,3,4,75,61-70%
+Morocco,9,12,75,61-70%
+Lebanon,6,7,85.714,71-90%
+Cyprus,3,3,100,100%
+Palestine,2,1,100,100%
+Tajikistan,4,4,100,100%
+Bermuda,1,NA,NA,NA
+Curacao,1,NA,NA,NA

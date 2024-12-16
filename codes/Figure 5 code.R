@@ -10,7 +10,7 @@ library(countrycode)
 library(dplyr)
 
 # path
-setwd("E:/Manuscritos_em_producao/Manuscrito_Kelly_Zamudio_Cold_spots/data")
+setwd("F:/Manuscritos_em_producao/Manuscrito_Kelly_Zamudio_Cold_spots/data")
 
 # load data
 data <- read.csv("Final_postsubmission_Phase_2_Filtering.csv", sep = ",", fileEncoding = "latin1")
@@ -68,7 +68,7 @@ g <- ggraph(graph, layout = "fr") +
   geom_edge_link(aes(), arrow = arrow(length = unit(6, 'mm')), 
                  color = "grey", alpha = 0.6) + # Adiciona setas nas arestas
   geom_node_point(aes(size = size_class, color = global_north_south)) +
-  geom_node_text(aes(label = name), repel = TRUE, size = 3) + # Define o tamanho do texto
+  geom_node_text(aes(label = name), repel = TRUE, size = 4) + # Define o tamanho do texto
   scale_size_manual(name = "Number of Connections",
                     values = c("1-20" = 3, "21-50" = 6, "51-100" = 9, ">100" = 12),
                     breaks = c("1-20", "21-50", "51-100", ">100")) + # Ajusta o tamanho dos pontos e a ordem na legenda
@@ -79,5 +79,5 @@ x11()
 print(g)
 
 # saving
-setwd("E:/Manuscritos_em_producao/Manuscrito_Kelly_Zamudio_Cold_spots/resu/final/final_V2")
-ggsave("graph_conections_global_south_north2.png", plot = g, width = 18, height = 10, dpi = 300, bg = "white")
+setwd("F:/Manuscritos_em_producao/Manuscrito_Kelly_Zamudio_Cold_spots/resu/final/final_V3")
+ggsave("graph_conections_global_south_north3.png", plot = g, width = 18, height = 10, dpi = 300, bg = "white")
