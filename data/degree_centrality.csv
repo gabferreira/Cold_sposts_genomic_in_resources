@@ -1,0 +1,148 @@
+,Country,country_unique_studies,global_north_south,size_class,degree_centrality,degree_in,degree_out
+1,Afghanistan,1,Global South,1-20,1,1,0
+2,Albania,11,Global North,1-20,7,7,0
+3,Algeria,10,Global South,1-20,7,7,0
+4,Angola,2,Global South,1-20,1,1,0
+5,Argentina,6,Global South,1-20,5,4,1
+6,Armenia,4,Global South,1-20,4,4,0
+7,Aruba,1,Global South,1-20,1,1,0
+8,Australia,65,Global North,51-100,11,4,7
+9,Austria,8,Global North,1-20,15,6,9
+10,Azerbaijan,4,Global South,1-20,4,4,0
+11,Bahamas,3,Global South,1-20,2,2,0
+12,Belgium,1,Global North,1-20,3,1,2
+13,Belize,7,Global South,1-20,4,4,0
+14,Benin,1,Global South,1-20,1,1,0
+15,Bermuda,1,Global North,1-20,1,1,0
+16,Bolivia,4,Global South,1-20,3,3,0
+17,Bosnia and Herzegovina,3,Global North,1-20,3,3,0
+18,Botswana,2,Global South,1-20,2,2,0
+19,Brazil,32,Global South,21-50,15,7,8
+20,Bulgaria,8,Global North,1-20,7,7,0
+21,Cambodia,2,Global South,1-20,1,1,0
+22,Cameroon,10,Global South,1-20,4,4,0
+23,Canada,7,Global North,1-20,21,2,19
+24,Cayman Islands,1,Global South,1-20,1,1,0
+25,Central African Republic,2,Global South,1-20,1,1,0
+26,Chad,1,Global South,1-20,1,1,0
+27,Chile,5,Global South,1-20,9,2,7
+28,China,80,Global South,51-100,50,3,47
+29,Colombia,16,Global South,1-20,13,5,8
+30,Congo,4,Global South,1-20,2,2,0
+31,Costa Rica,14,Global South,1-20,6,6,0
+32,Croatia,13,Global North,1-20,12,11,1
+33,Cuba,6,Global South,1-20,4,4,0
+34,Curacao,1,Global South,1-20,1,1,0
+35,Cyprus,4,Global North,1-20,2,2,0
+36,Czechia,3,Global North,1-20,2,2,0
+37,Democratic Republic of Congo,6,Global South,1-20,3,3,0
+38,Denmark,3,Global North,1-20,4,3,1
+39,Dominican Republic,1,Global South,1-20,1,1,0
+40,Ecuador,19,Global South,1-20,7,7,0
+41,Egypt,1,Global South,1-20,1,1,0
+42,El Salvador,4,Global South,1-20,2,2,0
+43,Equatorial Guinea,4,Global South,1-20,1,1,0
+44,Ethiopia,4,Global South,1-20,1,1,0
+45,Fiji,2,Global South,1-20,3,2,1
+46,Finland,1,Global North,1-20,2,1,1
+47,France,32,Global North,21-50,27,15,12
+48,Gabon,6,Global South,1-20,1,1,0
+49,Georgia,5,Global South,1-20,5,5,0
+50,Germany,12,Global North,1-20,26,4,22
+51,Ghana,8,Global South,1-20,3,3,0
+52,Greece,18,Global North,1-20,23,12,11
+53,Guam,1,Global South,1-20,1,1,0
+54,Guatemala,14,Global South,1-20,2,2,0
+55,Guinea,3,Global South,1-20,1,1,0
+56,Guyana,5,Global South,1-20,3,3,0
+57,Honduras,8,Global South,1-20,1,1,0
+58,Hungary,8,Global North,1-20,8,6,2
+59,India,5,Global South,1-20,5,4,1
+60,Indonesia,11,Global South,1-20,3,3,0
+61,Iran,6,Global South,1-20,7,6,1
+62,Iraq,1,Global South,1-20,1,1,0
+63,Ireland,1,Global North,1-20,1,1,0
+64,Israel,11,Global North,1-20,9,7,2
+65,Italy,27,Global North,21-50,23,14,9
+66,Ivory Coast,1,Global South,1-20,1,1,0
+67,Jamaica,1,Global South,1-20,1,1,0
+68,Japan,16,Global North,1-20,8,3,5
+69,Jordan,4,Global South,1-20,2,2,0
+70,Kazakhstan,3,Global South,1-20,2,2,0
+71,Kenya,3,Global South,1-20,3,3,0
+72,Kyrgyzstan,2,Global South,1-20,2,2,0
+73,Laos,2,Global South,1-20,2,2,0
+74,Latvia,1,Global North,1-20,1,1,0
+75,Lebanon,4,Global South,1-20,3,3,0
+76,Liberia,1,Global South,1-20,1,1,0
+77,Libya,1,Global South,1-20,1,1,0
+78,Lithuania,1,Global North,1-20,1,1,0
+79,Madagascar,3,Global South,1-20,2,2,0
+80,Malawi,2,Global South,1-20,2,2,0
+81,Malaysia,9,Global South,1-20,6,3,3
+82,Mauritania,1,Global South,1-20,1,1,0
+83,Mexico,48,Global South,21-50,13,5,8
+84,Moldova,1,Global North,1-20,1,1,0
+85,Mongolia,1,Global South,1-20,1,1,0
+86,Montenegro,3,Global North,1-20,3,3,0
+87,Morocco,9,Global South,1-20,5,5,0
+88,Mozambique,3,Global South,1-20,3,3,0
+89,Myanmar,5,Global South,1-20,3,3,0
+90,Nepal,3,Global South,1-20,2,2,0
+91,New Zealand,1,Global North,1-20,1,1,0
+92,Nicaragua,7,Global South,1-20,3,3,0
+93,Niger,1,Global South,1-20,1,1,0
+94,Nigeria,6,Global South,1-20,3,3,0
+95,North Macedonia,6,Global North,1-20,5,5,0
+96,Northern Mariana Islands,1,Global South,1-20,1,1,0
+97,Oman,2,Global South,1-20,1,1,0
+98,Pakistan,2,Global South,1-20,2,2,0
+99,Palestine,1,Global South,1-20,1,1,0
+100,Panama,9,Global South,1-20,5,5,0
+101,Papua New Guinea,2,Global South,1-20,1,1,0
+102,Peru,11,Global South,1-20,5,5,0
+103,Philippines,6,Global South,1-20,2,2,0
+104,Poland,9,Global North,1-20,25,5,20
+105,Portugal,12,Global North,1-20,16,4,12
+106,Republic of Kosovo,1,Global North,1-20,1,1,0
+107,Romania,10,Global North,1-20,5,5,0
+108,Russia,11,Global North,1-20,8,8,0
+109,Sao Tome and Principe,2,Global South,1-20,1,1,0
+110,Saudi Arabia,2,Global South,1-20,2,2,0
+111,Serbia,5,Global North,1-20,5,5,0
+112,Seychelles,3,Global South,1-20,3,3,0
+113,Sierra Leone,2,Global South,1-20,2,2,0
+114,Slovakia,5,Global North,1-20,3,3,0
+115,Slovenia,5,Global North,1-20,8,4,4
+116,Solomon Islands,2,Global South,1-20,2,2,0
+117,South Africa,3,Global South,1-20,4,3,1
+118,South Korea,1,Global North,1-20,1,1,0
+119,Spain,37,Global North,21-50,40,10,30
+120,Sri Lanka,2,Global South,1-20,2,2,0
+121,Suriname,4,Global South,1-20,2,2,0
+122,Sweden,11,Global North,1-20,9,6,3
+123,Switzerland,9,Global North,1-20,49,3,46
+124,Syria,3,Global South,1-20,3,3,0
+125,Taiwan,4,Global South,1-20,5,3,2
+126,Tajikistan,3,Global South,1-20,2,2,0
+127,Tanzania,4,Global South,1-20,3,3,0
+128,Thailand,6,Global South,1-20,4,4,0
+129,Timor-Leste,1,Global South,1-20,1,1,0
+130,Trinidad and Tobago,1,Global South,1-20,1,1,0
+131,Tunisia,4,Global South,1-20,2,2,0
+132,Turkey,15,Global South,1-20,15,11,4
+133,Turkmenistan,3,Global South,1-20,2,2,0
+134,Ukraine,13,Global North,1-20,7,7,0
+135,United Arab Emirates,1,Global South,1-20,4,1,3
+136,United Kingdom,4,Global North,1-20,43,2,41
+137,United States,199,Global North,>100,82,10,72
+138,Uruguay,1,Global South,1-20,1,1,0
+139,Uzbekistan,3,Global South,1-20,2,2,0
+140,Venezuela,4,Global South,1-20,1,1,0
+141,Vietnam,6,Global South,1-20,4,4,0
+142,Yemen,1,Global South,1-20,1,1,0
+143,Zambia,1,Global South,1-20,1,1,0
+144,Zimbabwe,2,Global South,1-20,2,2,0
+145,Singapore,0,Global South,1-20,5,0,5
+146,Czech Republic,0,Global North,1-20,14,0,14
+147,Netherlands,0,Global North,1-20,6,0,6
